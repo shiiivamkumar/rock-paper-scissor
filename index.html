@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Rock Paper Scissors Game</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <section class="score-section">
+      <h2>Scores</h2>
+      <div class="score">
+        <span id="human-score">0</span> - <span id="computer-score">0</span>
+      </div>
+    </section>
+    <section class="game-section">
+      <div id="buttons-container" class="buttons-container">
+        <button class = "round" onclick="playRound('rock')"><img src="rock.png" alt=""></button>
+        <button class = "round" onclick="playRound('paper')"><img src="paper.png" alt=""></button>
+        <button class = "round" onclick="playRound('scissors')"><img src="scissors.png" alt=""></button>
+      </div>
+      <div id="result" class="result" style="display: none;">
+        <p id="round-result"></p>
+        <div id="chosen-buttons" class="chosen-buttons">
+          <button class = "round" id="human-choice" disabled></button>
+          <button class = "round" id="computer-choice" disabled></button>
+        </div>
+        <button id="play-again" onclick="playAgain()">Play Again</button>
+      </div>
+    </section>
+    <section class="action-section">
+      <button id="rules-button" onclick="toggleRules()">Rules</button>
+    </section>
+  </div>
+
+  <div id="next-section" class="next-section" style="display: none;">
+    <button id="next-button" onclick="openWinPage()">Next</button>
+  </div>
+
+  <div id="rules-popup" class="popup">
+    <div class="popup-content">
+      <h3>Game Rules</h3>
+      <p>Write the rules for the game here.</p>
+      <button onclick="toggleRules()">Close</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
